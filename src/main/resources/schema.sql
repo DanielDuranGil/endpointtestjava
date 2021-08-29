@@ -1,22 +1,14 @@
-DROP TABLE IF EXISTS balances;
-DROP TABLE IF EXISTS transactions;
+DROP TABLE IF EXISTS PRICES;
 
-CREATE TABLE balances
+CREATE TABLE PRICES
 (
-    id           INT AUTO_INCREMENT PRIMARY KEY,
-    account_iban VARCHAR(50)    NOT NULL UNIQUE,
-    total        DECIMAL(50, 2) NOT NULL DEFAULT 0
+    ID           INT AUTO_INCREMENT PRIMARY KEY,
+    BRAND_ID     INT NOT NULL,
+    START_DATE   TIMESTAMP NOT NULL,
+    END_DATE     TIMESTAMP NOT NULL,
+    PRICE_LIST   INT NOT NULL,
+    PRODUCT_ID   INT NOT NULL,
+    PRIORITY     INT NOT NULL,
+    PRICE        DECIMAL(50, 2) NOT NULL,
+    CURR         VARCHAR(3) NOT NULL
 );
-
-CREATE TABLE transactions
-(
-    id               INT AUTO_INCREMENT PRIMARY KEY,
-    reference        VARCHAR(50)    NOT NULL UNIQUE,
-    account_iban     VARCHAR(50)    NOT NULL,
-    transaction_date TIMESTAMP      NOT NULL,
-    amount           DECIMAL(50, 2) NOT NULL,
-    fee              DECIMAL(50, 2) NOT NULL,
-    description      VARCHAR(250) DEFAULT NULL,
-    foreign key (account_iban) references balances (account_iban)
-);
-
