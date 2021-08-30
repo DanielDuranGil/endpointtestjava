@@ -1,6 +1,6 @@
 {
 	"info": {
-		"_postman_id": "25914581-b417-41a3-8857-e08eba6dd14b",
+		"_postman_id": "5a718302-2718-454d-8407-d03590920fc7",
 		"name": "Amaris Test Java",
 		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
 	},
@@ -70,7 +70,7 @@
 							}
 						},
 						"url": {
-							"raw": "http://localhost:8080/prices/pvp?applicationDate=2020-06-14 10:00:00&productId=1&brandId=1",
+							"raw": "http://localhost:8080/prices/pvp?applicationDate=1592164800&productId=1&brandId=1",
 							"protocol": "http",
 							"host": [
 								"localhost"
@@ -83,7 +83,7 @@
 							"query": [
 								{
 									"key": "applicationDate",
-									"value": "2020-06-14 10:00:00"
+									"value": "1592164800"
 								},
 								{
 									"key": "productId",
@@ -157,7 +157,7 @@
 						],
 						"body": {
 							"mode": "raw",
-							"raw": "{\r\n    \"application_date\": \"14-06-2020 10:00:00\",\r\n    \"product_id\": 1,\r\n    \"brand_id\": 1\r\n}\r\n",
+							"raw": "",
 							"options": {
 								"raw": {
 									"language": "json"
