@@ -64,7 +64,7 @@ class EndPointTest {
         final String applicationDate = String.valueOf(
                 LocalDateTime.of(2020, Month.JUNE, day, hour, 0, 0).atZone(ZoneId.systemDefault()).toEpochSecond());
         ResponseEntity<Object> response = restTemplate
-                .getForEntity("/prices/pvp?applicationDate=" + applicationDate + "&productId=35455&brandId=1",
+                .getForEntity("/brand/1/product/35455/pvp?applicationDate=" + applicationDate,
                         Object.class);
 
         assertThat(response.getStatusCode()).isEqualTo(HttpStatus.OK);

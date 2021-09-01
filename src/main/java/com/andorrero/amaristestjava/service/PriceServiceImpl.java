@@ -27,9 +27,9 @@ public class PriceServiceImpl implements PriceService {
 
     @Override
     public Optional<PriceEntity> finalPrice(
-            final Long applicationDate,
+            final Integer brandId,
             final Integer productId,
-            final Integer brandId) {
+            final Long applicationDate) {
         log.info("Get final Price for date {}, product {}, brand {}", applicationDate, productId, brandId);
 
         var applicationDateInLocalDateTime = LocalDateTime

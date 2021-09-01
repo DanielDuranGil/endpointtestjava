@@ -32,9 +32,7 @@ class PriceExceptionHandlerTest {
     @Test
     void testWhenMissingRequestParametersShouldHandleMissingServletRequestParameterException() throws Exception {
         RequestBuilder request = MockMvcRequestBuilders
-                .get("/prices/pvp")
-                .param("productId", String.valueOf(1))
-                .param("brandId", String.valueOf(2))
+                .get("/brand/1/product/1/pvp")
                 .accept(MediaType.APPLICATION_JSON)
                 .contentType(MediaType.APPLICATION_JSON);
         mvc.perform(request)

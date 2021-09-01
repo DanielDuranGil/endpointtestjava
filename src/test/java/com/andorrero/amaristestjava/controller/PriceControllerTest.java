@@ -43,10 +43,9 @@ class PriceControllerTest {
     @Test
     void testWhenPvpNotFoundShouldBeOkStatusAndNotFoundErrorMessage() {
         final ResponseEntity<Object> responseEntity =
-                priceController.finalPrice(
-                        LocalDateTime.of(2020, Month.JUNE, 14, 10, 0, 0).atZone(ZoneId.systemDefault()).toEpochSecond(),
-                        1,
-                        1);
+                priceController.finalPrice(1, 1,
+                        LocalDateTime.of(2020, Month.JUNE, 14, 10, 0, 0).atZone(ZoneId.systemDefault())
+                                .toEpochSecond());
 
         assertThat(responseEntity.getStatusCode()).isEqualTo(HttpStatus.OK);
         assertThat(((ErrorResponseDetail) responseEntity.getBody()).getCode()).isEqualTo(HttpStatus.OK.value());
@@ -62,9 +61,9 @@ class PriceControllerTest {
                 .priceList(1).productId(35455).priority(0).price(35.50f).currency("EUR").build());
         priceRepository.save(priceEntityTest);
         final ResponseEntity<Object> responseEntity =
-                priceController.finalPrice(
-                        LocalDateTime.of(2020, Month.JUNE, 14, 10, 0, 0).atZone(ZoneId.systemDefault()).toEpochSecond(),
-                        35455, 1);
+                priceController.finalPrice(1, 35455,
+                        LocalDateTime.of(2020, Month.JUNE, 14, 10, 0, 0).atZone(ZoneId.systemDefault())
+                                .toEpochSecond());
 
         assertThat(responseEntity.getStatusCode()).isEqualTo(HttpStatus.OK);
         assertThat(responseEntity.getBody()).isEqualTo(priceEntityTest);

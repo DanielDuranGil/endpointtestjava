@@ -6,9 +6,6 @@ import com.andorrero.amaristestjava.model.dto.PriceEntity;
 
 public interface PriceService {
 
-    Optional<PriceEntity> finalPrice(
-            final Long applicationDate,
-            final Integer productId,
-            final Integer brandId);
+    Optional<PriceEntity> finalPrice(final Integer brandId, final Integer productId, final Long applicationDate);
 
 }

@@ -5,8 +5,8 @@ import java.time.Month;
 import java.time.ZoneId;
 import java.util.Optional;
 
-import com.andorrero.amaristestjava.model.dto.PriceEntity;
 import com.andorrero.amaristestjava.builder.PriceEntityBuilder;
+import com.andorrero.amaristestjava.model.dto.PriceEntity;
 import com.andorrero.amaristestjava.repository.PriceRepository;
 
 import org.junit.jupiter.api.BeforeEach;
@@ -35,9 +35,9 @@ class PriceServiceImplTest {
     @Test
     void testWhenNoDataInTableShouldBePvpNotFound() {
         final Optional<PriceEntity> priceEntityOptional =
-                priceService.finalPrice(
-                        LocalDateTime.of(2020, Month.JUNE, 14, 10, 0, 0).atZone(ZoneId.systemDefault()).toEpochSecond(),
-                        1, 1);
+                priceService.finalPrice(1, 1,
+                        LocalDateTime.of(2020, Month.JUNE, 14, 10, 0, 0).atZone(ZoneId.systemDefault())
+                                .toEpochSecond());
 
         assertThat(priceEntityOptional).isEmpty();
     }
@@ -46,9 +46,9 @@ class PriceServiceImplTest {
     void testWhenProductNotExistsShouldGetPvpNotFound() {
         priceRepository.save(createPriceEntity(0));
         final Optional<PriceEntity> priceEntityOptional =
-                priceService.finalPrice(
-                        LocalDateTime.of(2020, Month.JUNE, 14, 10, 0, 0).atZone(ZoneId.systemDefault()).toEpochSecond(),
-                        1, 1);
+                priceService.finalPrice(1, 1,
+                        LocalDateTime.of(2020, Month.JUNE, 14, 10, 0, 0).atZone(ZoneId.systemDefault())
+                                .toEpochSecond());
 
         assertThat(priceEntityOptional).isEmpty();
     }
@@ -57,9 +57,9 @@ class PriceServiceImplTest {
     void testWhenBrandNotExistsShouldGetPvpNotFound() {
         priceRepository.save(createPriceEntity(0));
         final Optional<PriceEntity> priceEntityOptional =
-                priceService.finalPrice(
-                        LocalDateTime.of(2020, Month.JUNE, 14, 10, 0, 0).atZone(ZoneId.systemDefault()).toEpochSecond(),
-                        35455, 2);
+                priceService.finalPrice(2, 35455,
+                        LocalDateTime.of(2020, Month.JUNE, 14, 10, 0, 0).atZone(ZoneId.systemDefault())
+                                .toEpochSecond());
 
         assertThat(priceEntityOptional).isEmpty();
     }
@@ -68,9 +68,9 @@ class PriceServiceImplTest {
     void testWhenApplicationDateNotIsInPeriodShouldGetPvpNotFound() {
         priceRepository.save(createPriceEntity(0));
         final Optional<PriceEntity> priceEntityOptional =
-                priceService.finalPrice(
-                        LocalDateTime.of(2021, Month.JUNE, 14, 10, 0, 0).atZone(ZoneId.systemDefault()).toEpochSecond(),
-                        35455, 1);
+                priceService.finalPrice(1, 35455,
+                        LocalDateTime.of(2021, Month.JUNE, 14, 10, 0, 0).atZone(ZoneId.systemDefault())
+                                .toEpochSecond());
 
         assertThat(priceEntityOptional).isEmpty();
     }
@@ -80,9 +80,9 @@ class PriceServiceImplTest {
         final PriceEntity priceEntityTest = createPriceEntity(0);
         priceRepository.save(priceEntityTest);
         final Optional<PriceEntity> priceEntityOptional =
-                priceService.finalPrice(
-                        LocalDateTime.of(2020, Month.JUNE, 14, 10, 0, 0).atZone(ZoneId.systemDefault()).toEpochSecond(),
-                        35455, 1);
+                priceService.finalPrice(1, 35455,
+                        LocalDateTime.of(2020, Month.JUNE, 14, 10, 0, 0).atZone(ZoneId.systemDefault())
+                                .toEpochSecond());
 
         assertThat(priceEntityOptional).isPresent();
         assertThat(priceEntityTest).isEqualTo(priceEntityOptional.get());
@@ -94,9 +94,9 @@ class PriceServiceImplTest {
         priceRepository.save(createPriceEntity(0));
         priceRepository.save(priceEntityTestPriority1);
         final Optional<PriceEntity> priceEntityOptional =
-                priceService.finalPrice(
-                        LocalDateTime.of(2020, Month.JUNE, 14, 10, 0, 0).atZone(ZoneId.systemDefault()).toEpochSecond(),
-                        35455, 1);
+                priceService.finalPrice(1, 35455,
+                        LocalDateTime.of(2020, Month.JUNE, 14, 10, 0, 0).atZone(ZoneId.systemDefault())
+                                .toEpochSecond());
 
         assertThat(priceEntityOptional).isPresent();
         assertThat(priceEntityTestPriority1).isEqualTo(priceEntityOptional.get());
