@@ -1,6 +1,6 @@
-package com.andorrero.amaristestjava.error;
+package com.andorrero.endpointjava.error;
 
-import com.andorrero.amaristestjava.controller.PriceController;
+import com.andorrero.endpointjava.controller.PriceController;
 
 import org.junit.jupiter.api.Test;
 import org.junit.jupiter.api.extension.ExtendWith;
@@ -15,7 +15,7 @@ import org.springframework.test.web.servlet.RequestBuilder;
 import org.springframework.test.web.servlet.request.MockMvcRequestBuilders;
 import org.springframework.test.web.servlet.result.MockMvcResultHandlers;
 
-import static com.andorrero.amaristestjava.error.PriceErrorCode.ERR_001;
+import static com.andorrero.endpointjava.error.PriceErrorCode.ERR_001;
 import static org.springframework.test.web.servlet.result.MockMvcResultMatchers.jsonPath;
 import static org.springframework.test.web.servlet.result.MockMvcResultMatchers.status;
 

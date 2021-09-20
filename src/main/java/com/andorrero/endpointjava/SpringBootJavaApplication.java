@@ -1,13 +1,13 @@
-package com.andorrero.amaristestjava;
+package com.andorrero.endpointjava;
 
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
 
 @SpringBootApplication
-public class AmarisTestJavaApplication {
+public class SpringBootJavaApplication {
 
     public static void main(String[] args) {
-        SpringApplication.run(AmarisTestJavaApplication.class, args);
+        SpringApplication.run(SpringBootJavaApplication.class, args);
     }
 
 }

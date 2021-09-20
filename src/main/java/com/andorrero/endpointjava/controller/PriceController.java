@@ -1,9 +1,9 @@
-package com.andorrero.amaristestjava.controller;
+package com.andorrero.endpointjava.controller;
 
 import java.util.Optional;
 
-import com.andorrero.amaristestjava.model.dto.PriceEntity;
-import com.andorrero.amaristestjava.service.PriceService;
+import com.andorrero.endpointjava.model.dto.PriceEntity;
+import com.andorrero.endpointjava.service.PriceService;
 
 import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;
@@ -13,8 +13,8 @@ import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestParam;
 import org.springframework.web.bind.annotation.RestController;
 
-import static com.andorrero.amaristestjava.builder.ErrorResponseBuilder.buildErrorResponseDetail;
-import static com.andorrero.amaristestjava.error.PriceErrorCode.ERR_002;
+import static com.andorrero.endpointjava.builder.ErrorResponseBuilder.buildErrorResponseDetail;
+import static com.andorrero.endpointjava.error.PriceErrorCode.ERR_002;
 
 @RestController
 @RequestMapping("/")

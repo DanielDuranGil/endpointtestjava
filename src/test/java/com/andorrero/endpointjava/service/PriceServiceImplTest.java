@@ -1,13 +1,13 @@
-package com.andorrero.amaristestjava.service;
+package com.andorrero.endpointjava.service;
 
 import java.time.LocalDateTime;
 import java.time.Month;
 import java.time.ZoneId;
 import java.util.Optional;
 
-import com.andorrero.amaristestjava.builder.PriceEntityBuilder;
-import com.andorrero.amaristestjava.model.dto.PriceEntity;
-import com.andorrero.amaristestjava.repository.PriceRepository;
+import com.andorrero.endpointjava.builder.PriceEntityBuilder;
+import com.andorrero.endpointjava.model.dto.PriceEntity;
+import com.andorrero.endpointjava.repository.PriceRepository;
 
 import org.junit.jupiter.api.BeforeEach;
 import org.junit.jupiter.api.Test;

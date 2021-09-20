@@ -1,8 +1,8 @@
-package com.andorrero.amaristestjava.builder;
+package com.andorrero.endpointjava.builder;
 
 import java.time.LocalDateTime;
 
-import com.andorrero.amaristestjava.model.domain.ErrorResponseDetail;
+import com.andorrero.endpointjava.model.domain.ErrorResponseDetail;
 
 public class ErrorResponseBuilder {
 

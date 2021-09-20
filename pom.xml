@@ -12,10 +12,10 @@
     </parent>
 
     <groupId>com.andorrero</groupId>
-    <artifactId>amaristestjava</artifactId>
+    <artifactId>endpointjava</artifactId>
     <version>0.0.1-SNAPSHOT</version>
-    <name>amaristestjava</name>
-    <description>Amaris test Java for Spring Boot</description>
+    <name>endpointjava</name>
+    <description>Test Java for Spring Boot</description>
 
     <properties>
         <java.version>11</java.version>

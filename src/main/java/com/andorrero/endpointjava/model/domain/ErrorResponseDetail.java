@@ -1,4 +1,4 @@
-package com.andorrero.amaristestjava.model.domain;
+package com.andorrero.endpointjava.model.domain;
 
 import java.time.LocalDateTime;
 

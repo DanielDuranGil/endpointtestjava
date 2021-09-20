@@ -1,8 +1,8 @@
-package com.andorrero.amaristestjava.service;
+package com.andorrero.endpointjava.service;
 
 import java.util.Optional;
 
-import com.andorrero.amaristestjava.model.dto.PriceEntity;
+import com.andorrero.endpointjava.model.dto.PriceEntity;
 
 public interface PriceService {
 

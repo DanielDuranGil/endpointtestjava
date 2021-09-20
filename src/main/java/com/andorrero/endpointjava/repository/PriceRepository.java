@@ -1,8 +1,8 @@
-package com.andorrero.amaristestjava.repository;
+package com.andorrero.endpointjava.repository;
 
 import java.util.List;
 
-import com.andorrero.amaristestjava.model.dto.PriceEntity;
+import com.andorrero.endpointjava.model.dto.PriceEntity;
 
 import org.springframework.data.jpa.repository.JpaRepository;
 

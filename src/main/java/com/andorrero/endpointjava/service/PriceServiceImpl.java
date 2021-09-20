@@ -1,4 +1,4 @@
-package com.andorrero.amaristestjava.service;
+package com.andorrero.endpointjava.service;
 
 import java.time.Instant;
 import java.time.LocalDateTime;
@@ -8,8 +8,8 @@ import java.util.List;
 import java.util.Optional;
 import java.util.stream.Collectors;
 
-import com.andorrero.amaristestjava.model.dto.PriceEntity;
-import com.andorrero.amaristestjava.repository.PriceRepository;
+import com.andorrero.endpointjava.model.dto.PriceEntity;
+import com.andorrero.endpointjava.repository.PriceRepository;
 
 import org.springframework.stereotype.Service;
 

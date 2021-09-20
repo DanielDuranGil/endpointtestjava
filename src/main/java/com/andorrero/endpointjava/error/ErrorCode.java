@@ -1,4 +1,4 @@
-package com.andorrero.amaristestjava.error;
+package com.andorrero.endpointjava.error;
 
 import java.io.Serializable;
 

@@ -1,5 +1,5 @@
 spring:
   datasource:
-    url: jdbc:h2:mem:amaristestjavadb
+    url: jdbc:h2:mem:testjavadb
     username: sa
     password: sa

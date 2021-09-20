@@ -1,4 +1,4 @@
-package com.andorrero.amaristestjava.builder;
+package com.andorrero.endpointjava.builder;
 
 import java.time.LocalDateTime;
 

@@ -1,15 +1,15 @@
-package com.andorrero.amaristestjava.controller;
+package com.andorrero.endpointjava.controller;
 
 import java.time.LocalDateTime;
 import java.time.Month;
 import java.time.ZoneId;
 
-import com.andorrero.amaristestjava.builder.PriceEntityBuilder;
-import com.andorrero.amaristestjava.model.domain.ErrorResponseDetail;
-import com.andorrero.amaristestjava.model.dto.PriceEntity;
-import com.andorrero.amaristestjava.repository.PriceRepository;
-import com.andorrero.amaristestjava.service.PriceService;
-import com.andorrero.amaristestjava.service.PriceServiceImpl;
+import com.andorrero.endpointjava.builder.PriceEntityBuilder;
+import com.andorrero.endpointjava.model.domain.ErrorResponseDetail;
+import com.andorrero.endpointjava.model.dto.PriceEntity;
+import com.andorrero.endpointjava.repository.PriceRepository;
+import com.andorrero.endpointjava.service.PriceService;
+import com.andorrero.endpointjava.service.PriceServiceImpl;
 
 import org.junit.jupiter.api.BeforeEach;
 import org.junit.jupiter.api.Test;
@@ -20,7 +20,7 @@ import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;
 import org.springframework.test.context.junit.jupiter.SpringExtension;
 
-import static com.andorrero.amaristestjava.error.PriceErrorCode.ERR_002;
+import static com.andorrero.endpointjava.error.PriceErrorCode.ERR_002;
 import static org.assertj.core.api.Assertions.assertThat;
 
 @ExtendWith(SpringExtension.class)

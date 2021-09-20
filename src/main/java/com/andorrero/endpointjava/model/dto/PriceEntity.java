@@ -1,4 +1,4 @@
-package com.andorrero.amaristestjava.model.dto;
+package com.andorrero.endpointjava.model.dto;
 
 import java.time.LocalDateTime;
 
@@ -9,7 +9,7 @@ import javax.persistence.GenerationType;
 import javax.persistence.Id;
 import javax.persistence.Table;
 
-import com.andorrero.amaristestjava.builder.PriceEntityBuilder;
+import com.andorrero.endpointjava.builder.PriceEntityBuilder;
 import com.fasterxml.jackson.annotation.JsonFormat;
 import com.fasterxml.jackson.annotation.JsonIgnoreProperties;
 

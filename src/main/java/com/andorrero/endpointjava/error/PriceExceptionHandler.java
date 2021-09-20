@@ -1,4 +1,4 @@
-package com.andorrero.amaristestjava.error;
+package com.andorrero.endpointjava.error;
 
 import javax.validation.constraints.NotNull;
 
@@ -10,8 +10,8 @@ import org.springframework.web.bind.annotation.ControllerAdvice;
 import org.springframework.web.context.request.WebRequest;
 import org.springframework.web.servlet.mvc.method.annotation.ResponseEntityExceptionHandler;
 
-import static com.andorrero.amaristestjava.builder.ErrorResponseBuilder.buildErrorResponseDetail;
-import static com.andorrero.amaristestjava.error.PriceErrorCode.ERR_001;
+import static com.andorrero.endpointjava.builder.ErrorResponseBuilder.buildErrorResponseDetail;
+import static com.andorrero.endpointjava.error.PriceErrorCode.ERR_001;
 import lombok.extern.slf4j.Slf4j;
 
 @Slf4j
